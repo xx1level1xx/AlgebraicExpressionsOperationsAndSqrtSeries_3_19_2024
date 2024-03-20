@@ -525,13 +525,21 @@ string simplifyInputExpressionString(string exp) {
 						}
 					}
 					//exp[exp.length() - 1] = null;
+					
 				}
 			}
 		}
 	}
+	////////////////cases
+	string tempString="";
+	for(int i=0;i<exp.length-2;i++)
+        {
+             tempString += exp[i];
+	}
 	//delete[] posOpenParanthesis;
 	//delete[] posClosedParanthesis;
-	return exp;//slow
+	//return exp;//slow
+	return tempString;
 }
 template <typename T> void shouldResize(T*& arrayToResize, int oldSize, int pos, int newSize) {
 	T* temp = new T[pos];
