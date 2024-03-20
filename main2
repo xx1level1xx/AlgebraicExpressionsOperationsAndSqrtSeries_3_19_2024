@@ -754,7 +754,7 @@ int common(int a, int b, int c) {
 	int numPrimes = sizeof(primes) / sizeof(int);
 	int productPrimes = 1;
 	int count = 0;
-	int doneFOur = 0;
+	bool done = false;
 	for (int i = 0; i < 4; i++) {
 		while (count != numPrimes) {
 			if (i == 0) {
@@ -786,9 +786,16 @@ int common(int a, int b, int c) {
 					//////
 				}
 			}
+                        if(count+1==numPrimes&&i==3)
+                        {
+                             done = true;
+                             break;
+                        }
 			count++;
 		}
-	}
+                if(done){
+                     break;
+                }
 	return productPrimes;
 }
 fract::fract() {
