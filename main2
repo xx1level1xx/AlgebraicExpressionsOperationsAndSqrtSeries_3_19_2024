@@ -31,6 +31,7 @@ double convertDeci(string num);
 double tenthFract(int num);
 int main() {
 	string exp = "ln(x+y)+(99)exp(y+(99)z)";
+	string exp2 = "(99 + (10))"; //ikea?
 	string simplifiedExp = simplifyInputExpressionString(exp);
 	cout << simplifiedExp << endl;
 	//To Do: change to fraction
