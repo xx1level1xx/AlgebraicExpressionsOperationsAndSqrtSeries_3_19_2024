@@ -508,7 +508,7 @@ string simplifyInputExpressionString(string exp) {
 					cout << "test3" << endl;
 					bool notShiftByTwo = true;
 					
-					for (int j = savedPos + 1; j < exp.length(); j++) {
+					for (int j = savedPos + 1; j < exp.length()-1; j++) {
 						//cout << "j " << j << endl;
 						//cout << "i " << i << endl;
 						cout << "test4" << endl;
