@@ -767,21 +767,21 @@ while(done==false){
 				}
 
 			}
-			else if (i == 1) {
+		        if (i == 1) {
 				if (a % primes[count] == 0 && b % primes[count] == 0) {
 					productPrimes *= primes[count];
 					a /= primes[count];
 					b /= primes[count];
 				}
 			}
-			else if (i == 2) {
+			if (i == 2) {
 				if (a % primes[count] == 0 && c % primes[count] == 0) {
 					productPrimes *= primes[count];
 					//////
 					//////
 				}
 			}
-			else if (i == 3) {
+			if (i == 3) {
 				if (b % primes[count] == 0 && c % primes[count] == 0) {
 					productPrimes *= primes[count];
 					//////
