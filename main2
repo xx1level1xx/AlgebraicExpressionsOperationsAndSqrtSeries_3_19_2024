@@ -717,8 +717,8 @@ fract deciToFract(double d) {
 	double eps = 0.00001;
 	vector<int> fractNumArr;
 	while (abs(reminder) > eps) {
-		fractNumArr.push_back((int)(round(reminder*100)/100 / round(tenthFract(pos)*100)/100));
-		reminder -= (int)(round(reminder*100)/100 / round(tenthFract(pos)*100)/100);
+		fractNumArr.push_back((int)(round(reminder*pow(10,pos))/pow(10,pos) / round(tenthFract(pos)*pos(10,pos))/pow(10,pos)));
+		reminder -= (int)(round(reminder*pow(10,pos)/pow(10,pos) / round(tenthFract(pos)*pow(10,pos))/pow(10,pos));
 		pos++;
 	}
 	fract sum(0,1);
