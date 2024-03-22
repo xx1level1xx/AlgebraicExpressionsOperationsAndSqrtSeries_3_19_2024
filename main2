@@ -717,8 +717,8 @@ fract deciToFract(double d) {
 	double eps = 0.00001;
 	vector<int> fractNumArr;
 	while (abs(reminder) > eps) {
-		fractNumArr.push_back((int)(reminder / tenthFract(pos)));
-		reminder -= (int)(reminder / tenthFract(pos));
+		fractNumArr.push_back((int)(round(reminder*100)/100 / round(tenthFract(pos)*100)/100));
+		reminder -= (int)(round(reminder*100)/100 / round(tenthFract(pos)*100)/100);
 		pos++;
 	}
 	fract sum(0,1);
@@ -745,6 +745,8 @@ int common(int a, int b) {
 	for (int i = 0; i < count; i++) {
 		if (a % primes[i] == 0 && b % primes[i] == 0) {
 			productPrimes *= primes[i];
+                        a /= primes[i];
+                        b /= primes[i];
 			break;
 		}
 	}
